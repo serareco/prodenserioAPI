@@ -10,7 +10,7 @@ mongoose.connect('mongodb://admin:admin@ds037283.mongolab.com:37283/prodenserio'
 // Express
 //CORS middleware
 var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'facebook.com');
+    res.header('Access-Control-Allow-Origin', 'https://jquery.com/');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
