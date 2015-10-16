@@ -10,14 +10,14 @@ mongoose.connect('mongodb://admin:admin@ds037283.mongolab.com:37283/prodenserio'
 // Express
 //CORS middleware
 var app = express();
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
-app.use('/api',require('./routes/api'));
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "jquery.com/");
+  res.header("Access-Control-Allow-Origin", "https://jquery.com/");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+app.use('/api',require('./routes/api'));
 
 // Start server
 //app.listen(3000);
