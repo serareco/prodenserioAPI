@@ -11,7 +11,7 @@ mongoose.connect('mongodb://admin:admin@ds037283.mongolab.com:37283/prodenserio'
 //CORS middleware
 var app = express();
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "prodenserio.com.ar");
+  res.header("Access-Control-Allow-Origin", "http://www.prodenserio.com.ar");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
